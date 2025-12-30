@@ -5,21 +5,21 @@
 class TodoCli < Formula
   desc "CLI Todoアプリ"
   homepage "https://github.com/wisteriahuman/todo-cli"
-  version "0.1.1"
+  version "0.1.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/wisteriahuman/todo-cli/releases/download/v0.1.1/todo-cli_Darwin_x86_64.tar.gz"
-      sha256 "d3f6c9516f66139dd6ff7576bd7a24a33e3bbd5ee142b3d94ccb7163eedda310"
+      url "https://github.com/wisteriahuman/todo-cli/releases/download/v0.1.2/todo-cli_Darwin_x86_64.tar.gz"
+      sha256 "32cd94c2f09ad8903069f25109cac360991372e19acc6461faa9fa10bf1372f9"
 
       def install
         bin.install "todo"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/wisteriahuman/todo-cli/releases/download/v0.1.1/todo-cli_Darwin_arm64.tar.gz"
-      sha256 "2d18e61d9e9d3641db20dfe0af258f1ae6d5698c0b4b09fafd7fc90d596ff71b"
+      url "https://github.com/wisteriahuman/todo-cli/releases/download/v0.1.2/todo-cli_Darwin_arm64.tar.gz"
+      sha256 "f3763b21e1f712025d9f9d2c19142f0da4ee9e14eac137420961ab96f77ba561"
 
       def install
         bin.install "todo"
@@ -29,15 +29,15 @@ class TodoCli < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/wisteriahuman/todo-cli/releases/download/v0.1.1/todo-cli_Linux_x86_64.tar.gz"
-      sha256 "0e2d04aed5bd3cbb1dac0bbfb401c8fbe8c31967934d07a9da15caf2268976de"
+      url "https://github.com/wisteriahuman/todo-cli/releases/download/v0.1.2/todo-cli_Linux_x86_64.tar.gz"
+      sha256 "6f2b290707f9bc84ada061e50bc081dc98b288beb71439e210d59acca042ebb4"
       def install
         bin.install "todo"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/wisteriahuman/todo-cli/releases/download/v0.1.1/todo-cli_Linux_arm64.tar.gz"
-      sha256 "cd7b4a6973a018775cb61cbb12f2addd6d68f889222f37d639a7c2fd92a7d52c"
+      url "https://github.com/wisteriahuman/todo-cli/releases/download/v0.1.2/todo-cli_Linux_arm64.tar.gz"
+      sha256 "c5f145dc1b2cab6f826879c0b7b8b0b2927d60d5b1a8ad92543a5f304000c90a"
       def install
         bin.install "todo"
       end
