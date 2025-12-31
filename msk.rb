@@ -5,21 +5,21 @@
 class Msk < Formula
   desc "Command your machines as one unified network"
   homepage "https://github.com/wisteriahuman/msk"
-  version "0.1.2"
+  version "0.1.3"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/wisteriahuman/msk/releases/download/v0.1.2/msk_Darwin_x86_64.tar.gz"
-      sha256 "759c6f7ae6c06cb7b2a2e4e0ea2dff8229e15f75d819fc8065d18ef3f6cb7539"
+      url "https://github.com/wisteriahuman/msk/releases/download/v0.1.3/msk_Darwin_x86_64.tar.gz"
+      sha256 "038706cc97dc9e2d0411ad2c9b103c6592ae32ca9a7e338f33841622d9a3663e"
 
       def install
         bin.install "msk"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/wisteriahuman/msk/releases/download/v0.1.2/msk_Darwin_arm64.tar.gz"
-      sha256 "4dc7d9167ae9a492a1253dc5e76ae7a6df0369ccb88a3d5702e6952e81e4f405"
+      url "https://github.com/wisteriahuman/msk/releases/download/v0.1.3/msk_Darwin_arm64.tar.gz"
+      sha256 "9eb41d9f2401ebd8c89289bbe10eafaf65812b3a5c382ca3916437ec55498cfd"
 
       def install
         bin.install "msk"
@@ -29,15 +29,15 @@ class Msk < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/wisteriahuman/msk/releases/download/v0.1.2/msk_Linux_x86_64.tar.gz"
-      sha256 "9c374f887ea46a247a599a3f637f582e687fb2288bb97b247569f9e5cafbb6f4"
+      url "https://github.com/wisteriahuman/msk/releases/download/v0.1.3/msk_Linux_x86_64.tar.gz"
+      sha256 "fcec773130458515f098dcd4a7f0d0716eb6c152c91e382d586615285b7befe2"
       def install
         bin.install "msk"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/wisteriahuman/msk/releases/download/v0.1.2/msk_Linux_arm64.tar.gz"
-      sha256 "cf2d6eae92f973e70fb425d9797455985e2aa6b3fdb231c4ed78360d540d8107"
+      url "https://github.com/wisteriahuman/msk/releases/download/v0.1.3/msk_Linux_arm64.tar.gz"
+      sha256 "1422bef25528d93fd86908913c72959901b7dc73fbae676adb52ccf2f8e1f86d"
       def install
         bin.install "msk"
       end
