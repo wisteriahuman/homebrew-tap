@@ -5,21 +5,21 @@
 class Prometheus < Formula
   desc "Markdownベースのノートアプリ"
   homepage "https://github.com/wisteriahuman/Prometheus"
-  version "0.2.2"
+  version "0.3.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/wisteriahuman/Prometheus/releases/download/v0.2.2/Prometheus_Darwin_x86_64.tar.gz"
-      sha256 "1a0301170d8429c8420137798d0ecad0d129a2dc87f9c55583a7a6777a12a282"
+      url "https://github.com/wisteriahuman/Prometheus/releases/download/v0.3.0/Prometheus_Darwin_x86_64.tar.gz"
+      sha256 "fd3279532606e58b6a8fd0141b5f44d419fe9cedc8f0aa71fae2a71c0fd07e47"
 
       define_method(:install) do
         bin.install "prometheus"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/wisteriahuman/Prometheus/releases/download/v0.2.2/Prometheus_Darwin_arm64.tar.gz"
-      sha256 "2c0bcdee23c375531ff4e31f43d32d8befdf1840dcdb3faea457d2f03c82c739"
+      url "https://github.com/wisteriahuman/Prometheus/releases/download/v0.3.0/Prometheus_Darwin_arm64.tar.gz"
+      sha256 "61ce5ad50736a0047fd0f31e63fee8bbda9a66e6eb81f006307a939bc7752f66"
 
       define_method(:install) do
         bin.install "prometheus"
@@ -29,15 +29,15 @@ class Prometheus < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/wisteriahuman/Prometheus/releases/download/v0.2.2/Prometheus_Linux_x86_64.tar.gz"
-      sha256 "2cca039ad8ba0e4f4e03ee2a61e7f411ec78fecfbdcb0897de67c9c5fda9e650"
+      url "https://github.com/wisteriahuman/Prometheus/releases/download/v0.3.0/Prometheus_Linux_x86_64.tar.gz"
+      sha256 "e7fb87ded8260a6c77636ea9c53cf6099c7791bc10f2b1fe84e0f26239f1a396"
       define_method(:install) do
         bin.install "prometheus"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/wisteriahuman/Prometheus/releases/download/v0.2.2/Prometheus_Linux_arm64.tar.gz"
-      sha256 "eba84c3352fe7ec59a970407abe845fca7a39d3197959c98106093f4e0666415"
+      url "https://github.com/wisteriahuman/Prometheus/releases/download/v0.3.0/Prometheus_Linux_arm64.tar.gz"
+      sha256 "4cfe85f0a7ff67bfe6f3771ef8f022064f17171a1736ef791ac39eefdd101e87"
       define_method(:install) do
         bin.install "prometheus"
       end
