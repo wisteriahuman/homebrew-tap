@@ -11,7 +11,7 @@ class Prm < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/wisteriahuman/Prometheus/releases/download/v0.4.2/Prometheus_Darwin_x86_64.tar.gz"
-      sha256 "f5412c4afdc6013d6976363aa560f04505fc11c962928d06da77462d5d493a48"
+      sha256 "13c2596373a3b045acca68ee628977445ad10e0cb17f34e07ec60154cc60115f"
 
       define_method(:install) do
         bin.install "prm"
@@ -19,7 +19,7 @@ class Prm < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/wisteriahuman/Prometheus/releases/download/v0.4.2/Prometheus_Darwin_arm64.tar.gz"
-      sha256 "17cb1c73df13917bceb99d10c85d7292045a65604ef656c27fe93841892474ea"
+      sha256 "434c715bbaca5d51bd392512e9e7a258afb9812643b2c6e8bd56799b0272d168"
 
       define_method(:install) do
         bin.install "prm"
@@ -30,14 +30,14 @@ class Prm < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/wisteriahuman/Prometheus/releases/download/v0.4.2/Prometheus_Linux_x86_64.tar.gz"
-      sha256 "0595ee8e4e043aea78c0b4262c16aa61b1c7d6fc50d8baa3f5699d4a0fa0af70"
+      sha256 "6bf16704d8b4807632f40bbd541f2fe5e7f6147cd1a04d178f1573d62ccec00d"
       define_method(:install) do
         bin.install "prm"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/wisteriahuman/Prometheus/releases/download/v0.4.2/Prometheus_Linux_arm64.tar.gz"
-      sha256 "af53af8a1d884aeb26407291e7ff331d99f1d2f1de7123dba187c1dde6807ad8"
+      sha256 "f8d3569196662387a18bd6062497d41e972a730e1dc8572855440b03bf0b65d2"
       define_method(:install) do
         bin.install "prm"
       end
