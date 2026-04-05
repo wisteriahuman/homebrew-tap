@@ -5,21 +5,21 @@
 class Prm < Formula
   desc "Markdownベースのノートアプリ Prometheus"
   homepage "https://github.com/wisteriahuman/Prometheus"
-  version "0.5.3"
+  version "0.6.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/wisteriahuman/Prometheus/releases/download/v0.5.3/Prometheus_Darwin_x86_64.tar.gz"
-      sha256 "2756cbf2d0be2db4c8b6196441bb638cc534c6b2bb52e7041deab5e7451bc64d"
+      url "https://github.com/wisteriahuman/Prometheus/releases/download/v0.6.0/Prometheus_Darwin_x86_64.tar.gz"
+      sha256 "c41aed385e838710861a9201e7a9815e7692ad4a23c0755e95d6dc29063dc579"
 
       define_method(:install) do
         bin.install "prm"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/wisteriahuman/Prometheus/releases/download/v0.5.3/Prometheus_Darwin_arm64.tar.gz"
-      sha256 "1065976b8e9d48c719fd414c5d4c0f36d948f3d02e4ce7750a77fff1d3b282ea"
+      url "https://github.com/wisteriahuman/Prometheus/releases/download/v0.6.0/Prometheus_Darwin_arm64.tar.gz"
+      sha256 "281111affb50102d8c89036f10f7d019322365ee8202d865055178f69da93f7a"
 
       define_method(:install) do
         bin.install "prm"
@@ -29,15 +29,15 @@ class Prm < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/wisteriahuman/Prometheus/releases/download/v0.5.3/Prometheus_Linux_x86_64.tar.gz"
-      sha256 "7f73d6497f09215fff23b0f245306be768cc93564afcf9e708ab024e12b47681"
+      url "https://github.com/wisteriahuman/Prometheus/releases/download/v0.6.0/Prometheus_Linux_x86_64.tar.gz"
+      sha256 "b34c9aaa2a7bcfe486a6a725aad6595f463f1a1e9a6177dac1da5ef457f171e5"
       define_method(:install) do
         bin.install "prm"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/wisteriahuman/Prometheus/releases/download/v0.5.3/Prometheus_Linux_arm64.tar.gz"
-      sha256 "c6932390be7ea436ea1ec5273590ff3f1e0160586b4bf8fa549cdd39c819f389"
+      url "https://github.com/wisteriahuman/Prometheus/releases/download/v0.6.0/Prometheus_Linux_arm64.tar.gz"
+      sha256 "11f1c35bed9acc6053cabcda333feb6df07b50d98d14db4c9f91759a7400b0ed"
       define_method(:install) do
         bin.install "prm"
       end
